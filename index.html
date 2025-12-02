@@ -1,14 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whether-web</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
-  <h1>whether</h1>
+  <main class="weather-app">
+    <link rel="stylesheet" href="style.css">
+    <header class="app-header">
+      <h1>Weather</h1>
+      <p class="tag">Quick local weather, fast and pretty.</p>
+    </header>
+
+    <section class="controls">
+      <div class="input-wrap">
+        <input type="text" id="locIn" placeholder="Enter city or lat,lon" />
+        <button id="submitBtn" onclick="callPass()">Search</button>
+      </div>
+      <small class="hint">Try "London" or "48.8567,2.3508"</small>
+    </section>
+
+    <section class="card" id="resultsCard" aria-live="polite">
+      <div class="left">
+        <div class="icon" id="icon">☀️</div>
+        <div class="temp" id="temp">--°C</div>
+        <div class="desc" id="loc">Location</div>
+      </div>
+
+      <div class="right">
+        <div class="item"><span class="label">Humidity</span><span id="humidity" class="value">--%</span></div>
+        <div class="item"><span class="label">Wind</span><span id="wind" class="value">-- m/s</span></div>
+        <div class="item"><span class="label">Country</span><span id="country" class="value">--</span></div>
+        <div class="item"><span class="label">Local time</span><span id="loctime" class="value">--:--</span></div>
+      </div>
+    </section>
+
+    <footer class="credits">
+      <small>Made with ☁️ and code • Tip: press Enter after typing</small>
+    </footer>
+  </main>
+
+  <script src="env.js"></script>
+  <script src="dataprocess.js"></script>
+  <script src="UImanager.js"></script>
+  <script src="script.js"></script>
 </body>
-<script src="env.js"></script>
-<script src="script.js"></script>
-</html>
