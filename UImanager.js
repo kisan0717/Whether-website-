@@ -4,7 +4,7 @@ const displayWhether = (data) => {
   let humidity = document.querySelector('#humidity');
   let country = document.querySelector('#country');
   let loctime = document.querySelector('#loctime');
-  let wind = document.querySelector('wind');
+  let wind = document.querySelector('#wind');
 
   loc.innerHTML = `${data['city']}` ;
   temp.innerHTML = ` ${data['temp']}°C`;
@@ -12,8 +12,6 @@ const displayWhether = (data) => {
   country.innerHTML = `${data['country']}`;
   loctime.innerHTML = `${data['localtime']}`;
   wind.innerHTML = `${data['wind']}`;
-
-  console.table(data);
 }
 
 const callPass = () => {
